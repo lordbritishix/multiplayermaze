@@ -18,4 +18,4 @@ RUN git clone git@github.com:lordbritishix/multiplayermaze.git
 RUN ansible-playbook multiplayermaze/ansible/main.yml -i multiplayermaze/ansible/inventories/local/hosts
 
 # Port mapping - map container port 9300 to host port 9200
-# EXPOSE 9200 9300
+EXPOSE 5432 5432
