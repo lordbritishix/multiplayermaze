@@ -1,5 +1,12 @@
 - hosts: localserver
   sudo: yes
   tasks:
+    - name: Ensure required packages are installed
+      apt: name={{item}}
+      with_items:
+        - postgresql
+        - libpq-dev
+        - python-psycopg2
+
     - name: Create a new database with name mazeserver
-    - postgresql_db: name=mazeserver
+      postgresql_db: name=mazeserver

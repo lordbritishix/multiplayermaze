@@ -1,7 +1,6 @@
 FROM ansible/ubuntu14.04-ansible
 MAINTAINER Jim Quitevis <jim.quitevis@gmail.com>
 
-RUN apt-get update
 RUN apt-get install -y git
 
 # Setup and copy ssh keys. Ensure that local id_rsa is already added to github
