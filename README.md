@@ -16,7 +16,7 @@ Install Docker <br />
 
 # Tips
 SSH to docker container <br />
-<code>docker attach [container_id]</code>
+<code>sudo docker run -t -i quitevis/mazeserver /bin/bash</code>
 
 View logs <br />
 <code>sudo docker logs -f [container_name]</code>
