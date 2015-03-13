@@ -7,8 +7,8 @@ package com.quitevis.multiplayermaze.client;
  *
  */public class App 
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
-        System.out.println( "Hello From Client!" );
+        System.out.println("Hello From Client!");
     }
 }

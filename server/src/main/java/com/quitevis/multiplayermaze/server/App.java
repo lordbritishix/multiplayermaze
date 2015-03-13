@@ -8,8 +8,8 @@ package com.quitevis.multiplayermaze.server;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
-        System.out.println( "Hello From Server!" );
+        System.out.println("Hello From Server!");
     }
 }

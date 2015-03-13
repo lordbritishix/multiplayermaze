@@ -8,23 +8,61 @@
   <name>Multiplayer Maze</name>
   <url>git@github.com:lordbritishix/multiplayermaze.git</url>
 
-	<properties>
+  <properties>
     <junit.version>3.8.1</junit.version>
   </properties>
 
-	<modules>
+  <modules>
     <module>client</module>
     <module>server</module>
   </modules>
 
   <dependencyManagement>
-		<dependencies>
+    <dependencies>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
-		</dependencies>
+    </dependencies>
   </dependencyManagement>
+
+	<build>
+		<plugins>
+			<!-- Set compiler version for build phase -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<!-- Checkstyle on validate phase -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.14</version>
+				<executions>
+					<execution>
+						<id>validate</id>
+						<phase>validate</phase>
+						<configuration>
+							<configLocation>resources/checkstyle.xml</configLocation>
+							<encoding>UTF-8</encoding>
+							<consoleOutput>true</consoleOutput>
+							<failsOnError>true</failsOnError>
+							<linkXRef>false</linkXRef>
+						</configuration>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
