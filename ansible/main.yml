@@ -1,0 +1,5 @@
+- hosts: localserver
+  sudo: yes
+  tasks:
+    - name: Create a new database with name mazeserver
+    - postgresql_db: name=mazeserver
