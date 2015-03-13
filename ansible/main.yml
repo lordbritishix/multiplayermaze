@@ -2,11 +2,15 @@
   sudo: yes
   tasks:
     - name: Ensure required packages are installed
-      apt: name={{item}}
+      apt: name={{item}} state=latest
       with_items:
+        - postgresql-9.3
+        - postgresql-contrib-9.3
         - python-psycopg2
         - libpq-dev
-        - postgresql
+
+    - name: Ensure postgresql is running
+      service: name=postgresql state=started enabled=yes
 
     - name: Create a new database with name mazeserver
       postgresql_db: name=mazeserver
