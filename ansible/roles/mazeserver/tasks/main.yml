@@ -5,7 +5,11 @@
     - postgresql
     - python-psycopg2
 
-- name: Start postgres
-  sudo: yes
-  service: name=postgresql state=started
+- name: Ensure db is created
+  remote_user: postgres
+  postgresql_db: name=mazeserver
+
+- name: Create user
+  remote_user: postgres
+  postgresql_user: name=mazeserveruser password=mazeserveruser db=mazeserver
 
