@@ -1,17 +1,17 @@
 # multiplayermaze
 Maze server with multiplayer capabilities
 
-# Bootstrap
+
+# Setting up the server locally
+## Bootstrap
 Install ansible <br />
-<code>sudo easy_install pip</code><br />
+<code>sudo apt-get install pip pip</code><br />
 <code>sudo pip install ansible</code><br />
-<code>sudo pip install docker-py</code><br />
-<code>sudo pip install --upgrade ansible</code><br />
 
 Install Docker <br />
 <code>sudo apt-get install docker.io</code>
 
-# Deploy
+## Deploy
 <code>multiplayermaze/docker$ sudo docker build -t quitevis/mazeserver .</code>
 
 # Tips
