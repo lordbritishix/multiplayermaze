@@ -11,6 +11,3 @@
 
     - name: Ensure postgresql is running
       service: name=postgresql state=started enabled=yes
-
-    - name: Create a new database with name mazeserver
-      postgresql_db: name=mazeserver
