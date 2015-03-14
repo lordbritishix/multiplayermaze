@@ -1,15 +1,27 @@
+---
+- name: Create a postgres OS user
+  user: name=postgres
+
 - name: Ensure required packages are installed
   sudo: yes
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=present
   with_items:
     - postgresql
     - python-psycopg2
+  
+- name: Configure postgresql
+  template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf
+  notify: 
+    - restart postgresql
+
+- wait_for: path=/etc/postgresql/9.3/main/pg_hba.conf search_regex=ident
 
 - name: Ensure db is created
-  remote_user: postgres
   postgresql_db: name=mazeserver
+  sudo: yes
+  sudo_user: postgres
 
-- name: Create user
-  remote_user: postgres
-  postgresql_user: name=mazeserveruser password=mazeserveruser db=mazeserver
-
+- name: Create deploy user
+  postgresql_user: name=deploy password=deploy
+  sudo: yes
+  sudo_user: postgres

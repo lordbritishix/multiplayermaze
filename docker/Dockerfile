@@ -14,20 +14,19 @@ RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 # Clone the code
 RUN git clone git@github.com:lordbritishix/multiplayermaze.git
 
+EXPOSE 5432
+
 # Provision using ansible
 RUN ansible-playbook multiplayermaze/ansible/main.yml -i multiplayermaze/ansible/inventories/local/hosts
 
-USER postgres
+#USER postgres
 
 # Adjust PostgreSQL configuration so that remote connections to the
 # database are possible. 
-RUN echo "host all  all  0.0.0.0/0  md5" >> /etc/postgresql/9.3/main/pg_hba.conf
+#RUN echo "host all  all  0.0.0.0/0  md5" >> /etc/postgresql/9.3/main/pg_hba.conf
 
 # And add ``listen_addresses`` to ``/etc/postgresql/9.3/main/postgresql.conf``
-RUN echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
-
-# Port mapping
-EXPOSE 5432 5432
+#RUN echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
 
 # Set the default command to run when starting the container
 CMD ["/usr/lib/postgresql/9.3/bin/postgres", "-D", "/var/lib/postgresql/9.3/main", "-c", "config_file=/etc/postgresql/9.3/main/postgresql.conf"]
