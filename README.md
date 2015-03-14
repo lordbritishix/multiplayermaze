@@ -5,7 +5,7 @@ Maze server with multiplayer capabilities
 # Setting up the server locally
 ## Bootstrap
 Install ansible <br />
-<code>sudo apt-get install pip pip</code><br />
+<code>sudo apt-get install python-pip</code><br />
 <code>sudo pip install ansible</code><br />
 
 Install Docker <br />
