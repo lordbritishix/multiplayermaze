@@ -10,8 +10,9 @@ RUN rm -rf multiplayermaze-master
 RUN apt-get install -y --force-yes curl
 RUN apt-get install -y --force-yes unzip
 
-WORKDIR /src/multiplayermaze-master/ansible
-
 RUN curl -LOk https://github.com/lordbritishix/multiplayermaze/archive/master.zip
 RUN unzip master.zip
-RUN ansible-playbook docker_main.yml -t inventories/local/hosts
+
+WORKDIR /src/multiplayermaze-master/ansible
+
+RUN ansible-playbook docker_main.yml -i inventories/local/hosts
