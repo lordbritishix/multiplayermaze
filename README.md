@@ -11,8 +11,13 @@ Install ansible <br />
 Install Docker <br />
 <code>sudo apt-get install docker.io</code>
 
-## Deploy
-<code>multiplayermaze/docker$ sudo docker build -t quitevis/mazeserver .</code>
+## Provisioning
+### DB Box
+<code>multiplayermaze/ansible/docker/db$ sudo docker build -t quitevis/db .</code>
+
+## Running
+### DB Box
+<code>multiplayermaze/ansible/docker/db$ sudo docker run -p 5432 -e POSTGRES_PASSWORD=postgres quitevis/db</code>
 
 # Tips
 SSH to docker container <br />
