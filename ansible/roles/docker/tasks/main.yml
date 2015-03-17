@@ -1,0 +1,22 @@
+---
+- name: Install docker
+  apt:
+    pkg: "docker.io"
+    state: installed
+    
+- name: Install pip
+  apt:
+    pkg: "{{ item }}"
+    state: installed
+  with_items:
+    - python-dev
+    - python-pip
+
+- name: Install Docker-py
+  pip:
+    name: docker-py
+    
+- name: Ensure docker is running
+  service:
+    name: docker
+    state: started

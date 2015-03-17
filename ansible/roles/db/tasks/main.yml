@@ -1,0 +1,36 @@
+---
+- name: Build base image
+  sudo: yes
+  shell: docker build -t "quitevis/db" --rm=true docker/db/.  
+
+# TODO:
+# 1. Create deploy user
+# 2. Create database
+# 3. Populate with data
+  
+#- name: Create a postgres OS user
+#  user: name=postgres
+#
+#- name: Ensure required packages are installed
+#  sudo: yes
+#  apt: name={{item}} state=present
+#  with_items:
+#    - postgresql
+#    - python-psycopg2
+#  
+#- name: Configure postgresql
+#  template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf
+#  notify: 
+#    - restart postgresql
+#
+#- wait_for: path=/etc/postgresql/9.3/main/pg_hba.conf search_regex=ident
+#
+#- name: Ensure db is created
+#  postgresql_db: name=mazeserver
+#  sudo: yes
+#  sudo_user: postgres
+#
+#- name: Create deploy user
+#  postgresql_user: name=deploy password=deploy
+#  sudo: yes
+#  sudo_user: postgres
