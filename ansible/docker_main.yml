@@ -1,0 +1,6 @@
+---
+- hosts: localserver
+  sudo: true
+  roles: 
+    - docker
+    - db

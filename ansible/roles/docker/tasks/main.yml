@@ -1,8 +1,20 @@
 ---
-- name: Install docker
-  apt:
-    pkg: "docker.io"
-    state: installed
+- name: Add the Docker repository key to your local keychain
+  shell: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+
+- name: Check if docker list is already present
+  stat: path=/etc/apt/sources.list.d/docker.list
+  register: docker_list_present
+
+- name: Add the Docker repository to your apt sources list
+  shell: sudo sh -c "echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+
+- name: Update sources list if docker.list has just been created
+  shell: sudo apt-get update
+  when: docker_list_present.stat.exists == false
+
+- name: Install docker  
+  shell: sudo apt-get install lxc-docker-1.5.0
     
 - name: Install pip
   apt:
