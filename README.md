@@ -22,10 +22,10 @@ Maze server with multiplayer capabilities
 SSH to docker container <br/>
 <code>sudo docker run -ti -p 5432:5432 quitevis/db /bin/bash</code>
 
-Delete all docker containers<br/>
+2. Delete all docker containers<br/>
 <code>sudo docker rm -f $(sudo docker ps -qa)</code>
 
-Delete all docker images<br/>
+3. Delete all docker images<br/>
 <code>sudo docker rmi $(sudo docker images -qa)</code>
 
 # CI
