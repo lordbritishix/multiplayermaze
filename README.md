@@ -1,19 +1,24 @@
 # multiplayermaze
 Maze server with multiplayer capabilities
 
-
 # Environment setup
-## Install pip
+1. Install pip
 <code>sudo apt-get install python-pip</code>
-## Install ansible
+2. Install ansible
 <code>sudo pip install ansible</code>
-## Create / update the environment
+3. Create / update the environment
 <code>multiplayermaze/ansible$ sudo ansible-playbook main.yml -i inventories/local/hosts</code>
-## Run the DB server
+4. Run the DB server
 <code>$ sudo docker run -ti quitevis/db</code>
 
+# Dev Workflow
+1. Edit code
+2. Stop dockerized container
+2. Run ansible
+4. Start dockerized container
+
 # Tips
-## Docker
+1. Docker
 SSH to docker container <br/>
 <code>sudo docker run -ti -p 5432:5432 quitevis/db /bin/bash</code>
 
