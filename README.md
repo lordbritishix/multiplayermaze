@@ -1,5 +1,4 @@
-# multiplayermaze
-Maze server with multiplayer capabilities [![Build Status](https://travis-ci.org/lordbritishix/multiplayermaze.svg?branch=master)](https://travis-ci.org/lordbritishix/multiplayermaze)
+# Maze server with multiplayer capabilities <br/>
 
 # Environment setup
 1. Install pip<br/>
@@ -30,3 +29,4 @@ SSH to docker container <br/>
 
 # CI
 https://travis-ci.org/lordbritishix/multiplayermaze/
+[![Build Status](https://travis-ci.org/lordbritishix/multiplayermaze.svg?branch=master)](https://travis-ci.org/lordbritishix/multiplayermaze)
