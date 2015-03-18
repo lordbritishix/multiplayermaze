@@ -2,4 +2,4 @@
 - hosts: localserver
   sudo: true
   roles: 
-    - db_docker
+    - db

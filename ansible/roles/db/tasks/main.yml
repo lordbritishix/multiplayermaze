@@ -1,4 +1,23 @@
----
-- name: Build base image
-  sudo: yes
-  shell: docker build -t "quitevis/db" --rm=true ../docker/db/.
+- name: Install Postgresql
+  apt: name=postgresql
+  
+- name: Install pycopg2
+  apt: name=python-psycopg2
+
+- name: Update postgresql.conf
+  shell: echo "listen_addresses='*'" >> /etc/postgresql/9.3/main/postgresql.conf
+  
+- name: Update pg_hba.conf
+  template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf
+  
+- name: Restart postgres
+  service: name=postgresql state=restarted
+  
+- name: Create mazeserver db
+  sudo_user: postgres
+  postgresql_db: name=mazeserver
+  
+- name: Create deploy user
+  sudo_user: postgres
+  postgresql_user: name=deploy password=deploy db=mazeserver role_attr_flags=CREATEDB,CREATEUSER,LOGIN
+  

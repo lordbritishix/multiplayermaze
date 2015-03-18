@@ -3,4 +3,4 @@
   sudo: true
   roles: 
     - docker
-    - db
+    - db_docker
