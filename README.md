@@ -27,6 +27,9 @@ SSH to docker container <br/>
 3. Delete all docker images<br/>
 <code>sudo docker rmi $(sudo docker images -qa)</code>
 
+# Sprint Board
+https://trello.com/b/gGWLzccd/
+
 # CI
 https://travis-ci.org/lordbritishix/multiplayermaze/
 [![Build Status](https://travis-ci.org/lordbritishix/multiplayermaze.svg?branch=master)](https://travis-ci.org/lordbritishix/multiplayermaze)
