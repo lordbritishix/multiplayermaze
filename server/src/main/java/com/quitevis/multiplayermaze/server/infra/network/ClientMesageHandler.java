@@ -18,10 +18,10 @@ public class ClientMesageHandler extends ChannelInboundHandlerAdapter {
     }
     
     @Override
-    public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
         log.info("Client connected: {}", ctx.channel().remoteAddress().toString());
     }
-    
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf in = (ByteBuf) msg;
@@ -39,8 +39,7 @@ public class ClientMesageHandler extends ChannelInboundHandlerAdapter {
     }
     
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) 
-            throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         log.error("An error has occured ({})", 
                 ctx.channel().remoteAddress().toString(), cause);
     }
