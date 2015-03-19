@@ -51,7 +51,7 @@ public class MazeServer {
             // Bind and start to accept incoming connections.
             ChannelFuture f = b.bind(port).sync();
 
-            log.info("Mazeserver started. Listening at port: {}", port);
+            log.info("Mazeserver started. Listening to port: {}", port);
             
             // Wait until the server socket is closed.
             f.channel().closeFuture().sync();

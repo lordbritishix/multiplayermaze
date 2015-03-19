@@ -9,7 +9,7 @@
   <url>git@github.com:lordbritishix/multiplayermaze.git</url>
 
   <properties>
-    <junit.version>3.8.1</junit.version>
+    <junit.version>4.9</junit.version>
     <netty.version>4.0.24.Final</netty.version>
     <slf4j.version>1.7.10</slf4j.version>
     <lombok.version>1.16.2</lombok.version>
@@ -18,6 +18,7 @@
   <modules>
     <module>client</module>
     <module>server</module>
+    <module>tests</module>
   </modules>
 
   <dependencyManagement>
