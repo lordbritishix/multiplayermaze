@@ -19,7 +19,7 @@
       <artifactId>junit</artifactId>
       <scope>compile</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
@@ -39,6 +39,11 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.quitevis.multiplayermaze</groupId>
+      <artifactId>mazeserver-common</artifactId>
     </dependency>
   </dependencies>
 </project>

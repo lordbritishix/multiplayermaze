@@ -37,7 +37,11 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.quitevis.multiplayermaze</groupId>
+      <artifactId>mazeserver-common</artifactId>
     </dependency>
   </dependencies>
   <build>

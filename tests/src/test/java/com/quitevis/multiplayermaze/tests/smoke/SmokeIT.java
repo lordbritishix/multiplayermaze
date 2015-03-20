@@ -6,6 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import org.junit.Rule;
 import org.junit.Test;
 
+import com.quitevis.mazeserver.api.generated.MazeServerApi;
 import com.quitevis.multiplayermaze.tests.ClientTestResource;
 import com.quitevis.multiplayermaze.tests.TestBase;
 
@@ -27,6 +28,10 @@ public class SmokeIT extends TestBase {
     
     @Test
     public void clientCanSendMessageToTheServer() throws InterruptedException {
-        client.sendMessage("Hey there!");
+        MazeServerApi.SessionId id = MazeServerApi.SessionId.newBuilder().setSessionId("heya").build();
+        MazeServerApi.Maze maze = MazeServerApi.Maze.newBuilder().setMazeId("maze id").build();
+        
+        client.sendMessage(id);
+        client.sendMessage(maze);
     }
 }
