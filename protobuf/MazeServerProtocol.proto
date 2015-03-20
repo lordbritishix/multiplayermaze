@@ -1,10 +1,20 @@
 package com.quitevis.mazeserver.api.generated;
 
+option java_generic_services = true;
+
 message SessionId {
   optional string sessionId = 1;
 }
 
 message Maze {
   optional string mazeId = 1;
+}
+
+message Empty {
+
+}
+
+service MazeServerService {
+  rpc RequestGame (Empty) returns (SessionId);
 }
 

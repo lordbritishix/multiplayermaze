@@ -960,6 +960,551 @@ public final class MazeServerProtocol {
     // @@protoc_insertion_point(class_scope:com.quitevis.mazeserver.api.generated.Maze)
   }
 
+  public interface EmptyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.quitevis.mazeserver.api.generated.Empty)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code com.quitevis.mazeserver.api.generated.Empty}
+   */
+  public static final class Empty extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.quitevis.mazeserver.api.generated.Empty)
+      EmptyOrBuilder {
+    // Use Empty.newBuilder() to construct.
+    private Empty(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Empty(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Empty defaultInstance;
+    public static Empty getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Empty getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Empty(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Empty_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.class, com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Empty> PARSER =
+        new com.google.protobuf.AbstractParser<Empty>() {
+      public Empty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Empty(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Empty> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.quitevis.mazeserver.api.generated.Empty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.quitevis.mazeserver.api.generated.Empty)
+        com.quitevis.mazeserver.api.generated.MazeServerProtocol.EmptyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Empty_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.class, com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.Builder.class);
+      }
+
+      // Construct using com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor;
+      }
+
+      public com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty getDefaultInstanceForType() {
+        return com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.getDefaultInstance();
+      }
+
+      public com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty build() {
+        com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty buildPartial() {
+        com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty result = new com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty) {
+          return mergeFrom((com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty other) {
+        if (other == com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.quitevis.mazeserver.api.generated.Empty)
+    }
+
+    static {
+      defaultInstance = new Empty(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.quitevis.mazeserver.api.generated.Empty)
+  }
+
+  /**
+   * Protobuf service {@code com.quitevis.mazeserver.api.generated.MazeServerService}
+   */
+  public static abstract class MazeServerService
+      implements com.google.protobuf.Service {
+    protected MazeServerService() {}
+
+    public interface Interface {
+      /**
+       * <code>rpc RequestGame(.com.quitevis.mazeserver.api.generated.Empty) returns (.com.quitevis.mazeserver.api.generated.SessionId);</code>
+       */
+      public abstract void requestGame(
+          com.google.protobuf.RpcController controller,
+          com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty request,
+          com.google.protobuf.RpcCallback<com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId> done);
+
+    }
+
+    public static com.google.protobuf.Service newReflectiveService(
+        final Interface impl) {
+      return new MazeServerService() {
+        @java.lang.Override
+        public  void requestGame(
+            com.google.protobuf.RpcController controller,
+            com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty request,
+            com.google.protobuf.RpcCallback<com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId> done) {
+          impl.requestGame(controller, request, done);
+        }
+
+      };
+    }
+
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
+      return new com.google.protobuf.BlockingService() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+
+        public final com.google.protobuf.Message callBlockingMethod(
+            com.google.protobuf.Descriptors.MethodDescriptor method,
+            com.google.protobuf.RpcController controller,
+            com.google.protobuf.Message request)
+            throws com.google.protobuf.ServiceException {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return impl.requestGame(controller, (com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getRequestPrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getResponsePrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+      };
+    }
+
+    /**
+     * <code>rpc RequestGame(.com.quitevis.mazeserver.api.generated.Empty) returns (.com.quitevis.mazeserver.api.generated.SessionId);</code>
+     */
+    public abstract void requestGame(
+        com.google.protobuf.RpcController controller,
+        com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty request,
+        com.google.protobuf.RpcCallback<com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId> done);
+
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return com.quitevis.mazeserver.api.generated.MazeServerProtocol.getDescriptor().getServices().get(0);
+    }
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public final void callMethod(
+        com.google.protobuf.Descriptors.MethodDescriptor method,
+        com.google.protobuf.RpcController controller,
+        com.google.protobuf.Message request,
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          this.requestGame(controller, (com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty)request,
+            com.google.protobuf.RpcUtil.<com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getRequestPrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getResponsePrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
+      return new Stub(channel);
+    }
+
+    public static final class Stub extends com.quitevis.mazeserver.api.generated.MazeServerProtocol.MazeServerService implements Interface {
+      private Stub(com.google.protobuf.RpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.RpcChannel channel;
+
+      public com.google.protobuf.RpcChannel getChannel() {
+        return channel;
+      }
+
+      public  void requestGame(
+          com.google.protobuf.RpcController controller,
+          com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty request,
+          com.google.protobuf.RpcCallback<com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId.class,
+            com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId.getDefaultInstance()));
+      }
+    }
+
+    public static BlockingInterface newBlockingStub(
+        com.google.protobuf.BlockingRpcChannel channel) {
+      return new BlockingStub(channel);
+    }
+
+    public interface BlockingInterface {
+      public com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId requestGame(
+          com.google.protobuf.RpcController controller,
+          com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty request)
+          throws com.google.protobuf.ServiceException;
+    }
+
+    private static final class BlockingStub implements BlockingInterface {
+      private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.BlockingRpcChannel channel;
+
+      public com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId requestGame(
+          com.google.protobuf.RpcController controller,
+          com.quitevis.mazeserver.api.generated.MazeServerProtocol.Empty request)
+          throws com.google.protobuf.ServiceException {
+        return (com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId.getDefaultInstance());
+      }
+
+    }
+
+    // @@protoc_insertion_point(class_scope:com.quitevis.mazeserver.api.generated.MazeServerService)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor;
   private static
@@ -970,6 +1515,11 @@ public final class MazeServerProtocol {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_quitevis_mazeserver_api_generated_Maze_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_quitevis_mazeserver_api_generated_Empty_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -982,7 +1532,10 @@ public final class MazeServerProtocol {
       "\n\030MazeServerProtocol.proto\022%com.quitevis" +
       ".mazeserver.api.generated\"\036\n\tSessionId\022\021" +
       "\n\tsessionId\030\001 \001(\t\"\026\n\004Maze\022\016\n\006mazeId\030\001 \001(" +
-      "\t"
+      "\t\"\007\n\005Empty2\202\001\n\021MazeServerService\022m\n\013Requ" +
+      "estGame\022,.com.quitevis.mazeserver.api.ge" +
+      "nerated.Empty\0320.com.quitevis.mazeserver." +
+      "api.generated.SessionIdB\003\210\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1008,6 +1561,12 @@ public final class MazeServerProtocol {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor,
         new java.lang.String[] { "MazeId", });
+    internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_quitevis_mazeserver_api_generated_Empty_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

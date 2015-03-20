@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId;
 import com.quitevis.mazeserver.api.generated.MazeServerProtocol.Maze;
+import com.quitevis.mazeserver.api.generated.MazeServerProtocol.MazeServerService;
 import com.quitevis.multiplayermaze.tests.ClientTestResource;
 import com.quitevis.multiplayermaze.tests.TestBase;
 

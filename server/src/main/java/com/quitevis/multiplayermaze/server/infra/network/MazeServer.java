@@ -33,6 +33,7 @@ public class MazeServer {
         log.info("Starting mazeserver");
         
         try {
+            //Use TCP-IP channel
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup, workerGroup)
              .channel(NioServerSocketChannel.class)
