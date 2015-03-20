@@ -5,8 +5,6 @@
 
 
 <module name="Checker">
-
-
     <!-- Checks that property files contain the same keys. -->
     <module name="Translation"/>
 

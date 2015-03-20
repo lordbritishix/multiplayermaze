@@ -1,0 +1,6 @@
+package com.quitevis.mazeserver.api.generated;
+
+message SessionId {
+  required string sessionId = 1;
+}
+
