@@ -8,10 +8,10 @@ public final class MazeServerProtocol {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface SessionIdOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.quitevis.mazeserver.api.generated.SessionId)
-      com.google.protobuf.MessageOrBuilder {
+  public interface SessionIdOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
 
+    // optional string sessionId = 1;
     /**
      * <code>optional string sessionId = 1;</code>
      */
@@ -30,9 +30,8 @@ public final class MazeServerProtocol {
    * Protobuf type {@code com.quitevis.mazeserver.api.generated.SessionId}
    */
   public static final class SessionId extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.quitevis.mazeserver.api.generated.SessionId)
-      SessionIdOrBuilder {
+      com.google.protobuf.GeneratedMessage
+      implements SessionIdOrBuilder {
     // Use SessionId.newBuilder() to construct.
     private SessionId(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -79,9 +78,8 @@ public final class MazeServerProtocol {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              sessionId_ = bs;
+              sessionId_ = input.readBytes();
               break;
             }
           }
@@ -124,6 +122,7 @@ public final class MazeServerProtocol {
     }
 
     private int bitField0_;
+    // optional string sessionId = 1;
     public static final int SESSIONID_FIELD_NUMBER = 1;
     private java.lang.Object sessionId_;
     /**
@@ -172,8 +171,7 @@ public final class MazeServerProtocol {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized != -1) return isInitialized == 1;
 
       memoizedIsInitialized = 1;
       return true;
@@ -280,9 +278,8 @@ public final class MazeServerProtocol {
      * Protobuf type {@code com.quitevis.mazeserver.api.generated.SessionId}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.quitevis.mazeserver.api.generated.SessionId)
-        com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionIdOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionIdOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor;
@@ -397,6 +394,7 @@ public final class MazeServerProtocol {
       }
       private int bitField0_;
 
+      // optional string sessionId = 1;
       private java.lang.Object sessionId_ = "";
       /**
        * <code>optional string sessionId = 1;</code>
@@ -410,12 +408,9 @@ public final class MazeServerProtocol {
       public java.lang.String getSessionId() {
         java.lang.Object ref = sessionId_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            sessionId_ = s;
-          }
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          sessionId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -484,10 +479,10 @@ public final class MazeServerProtocol {
     // @@protoc_insertion_point(class_scope:com.quitevis.mazeserver.api.generated.SessionId)
   }
 
-  public interface MazeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.quitevis.mazeserver.api.generated.Maze)
-      com.google.protobuf.MessageOrBuilder {
+  public interface MazeOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
 
+    // optional string mazeId = 1;
     /**
      * <code>optional string mazeId = 1;</code>
      */
@@ -506,9 +501,8 @@ public final class MazeServerProtocol {
    * Protobuf type {@code com.quitevis.mazeserver.api.generated.Maze}
    */
   public static final class Maze extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.quitevis.mazeserver.api.generated.Maze)
-      MazeOrBuilder {
+      com.google.protobuf.GeneratedMessage
+      implements MazeOrBuilder {
     // Use Maze.newBuilder() to construct.
     private Maze(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -555,9 +549,8 @@ public final class MazeServerProtocol {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              mazeId_ = bs;
+              mazeId_ = input.readBytes();
               break;
             }
           }
@@ -600,6 +593,7 @@ public final class MazeServerProtocol {
     }
 
     private int bitField0_;
+    // optional string mazeId = 1;
     public static final int MAZEID_FIELD_NUMBER = 1;
     private java.lang.Object mazeId_;
     /**
@@ -648,8 +642,7 @@ public final class MazeServerProtocol {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized != -1) return isInitialized == 1;
 
       memoizedIsInitialized = 1;
       return true;
@@ -756,9 +749,8 @@ public final class MazeServerProtocol {
      * Protobuf type {@code com.quitevis.mazeserver.api.generated.Maze}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.quitevis.mazeserver.api.generated.Maze)
-        com.quitevis.mazeserver.api.generated.MazeServerProtocol.MazeOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.quitevis.mazeserver.api.generated.MazeServerProtocol.MazeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor;
@@ -873,6 +865,7 @@ public final class MazeServerProtocol {
       }
       private int bitField0_;
 
+      // optional string mazeId = 1;
       private java.lang.Object mazeId_ = "";
       /**
        * <code>optional string mazeId = 1;</code>
@@ -886,12 +879,9 @@ public final class MazeServerProtocol {
       public java.lang.String getMazeId() {
         java.lang.Object ref = mazeId_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            mazeId_ = s;
-          }
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          mazeId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -960,17 +950,15 @@ public final class MazeServerProtocol {
     // @@protoc_insertion_point(class_scope:com.quitevis.mazeserver.api.generated.Maze)
   }
 
-  public interface EmptyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.quitevis.mazeserver.api.generated.Empty)
-      com.google.protobuf.MessageOrBuilder {
+  public interface EmptyOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code com.quitevis.mazeserver.api.generated.Empty}
    */
   public static final class Empty extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.quitevis.mazeserver.api.generated.Empty)
-      EmptyOrBuilder {
+      com.google.protobuf.GeneratedMessage
+      implements EmptyOrBuilder {
     // Use Empty.newBuilder() to construct.
     private Empty(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1059,8 +1047,7 @@ public final class MazeServerProtocol {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
+      if (isInitialized != -1) return isInitialized == 1;
 
       memoizedIsInitialized = 1;
       return true;
@@ -1160,9 +1147,8 @@ public final class MazeServerProtocol {
      * Protobuf type {@code com.quitevis.mazeserver.api.generated.Empty}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.quitevis.mazeserver.api.generated.Empty)
-        com.quitevis.mazeserver.api.generated.MazeServerProtocol.EmptyOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.quitevis.mazeserver.api.generated.MazeServerProtocol.EmptyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.quitevis.mazeserver.api.generated.MazeServerProtocol.internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor;
@@ -1505,17 +1491,17 @@ public final class MazeServerProtocol {
     // @@protoc_insertion_point(class_scope:com.quitevis.mazeserver.api.generated.MazeServerService)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_quitevis_mazeserver_api_generated_SessionId_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_quitevis_mazeserver_api_generated_Maze_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -1538,35 +1524,35 @@ public final class MazeServerProtocol {
       "api.generated.SessionIdB\003\210\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
+      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+        public com.google.protobuf.ExtensionRegistry assignDescriptors(
+            com.google.protobuf.Descriptors.FileDescriptor root) {
+          descriptor = root;
+          internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+          internal_static_com_quitevis_mazeserver_api_generated_SessionId_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor,
+              new java.lang.String[] { "SessionId", });
+          internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+          internal_static_com_quitevis_mazeserver_api_generated_Maze_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor,
+              new java.lang.String[] { "MazeId", });
+          internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_com_quitevis_mazeserver_api_generated_Empty_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor,
+              new java.lang.String[] { });
+          return null;
+        }
+      };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_com_quitevis_mazeserver_api_generated_SessionId_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_quitevis_mazeserver_api_generated_SessionId_descriptor,
-        new java.lang.String[] { "SessionId", });
-    internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_com_quitevis_mazeserver_api_generated_Maze_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_quitevis_mazeserver_api_generated_Maze_descriptor,
-        new java.lang.String[] { "MazeId", });
-    internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_com_quitevis_mazeserver_api_generated_Empty_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_quitevis_mazeserver_api_generated_Empty_descriptor,
-        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

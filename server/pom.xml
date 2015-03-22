@@ -38,13 +38,19 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>com.quitevis.multiplayermaze</groupId>
       <artifactId>mazeserver-common</artifactId>
     </dependency>
   </dependencies>
   <build>
+    <resources>
+      <resource>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -64,13 +70,11 @@
               <minimizeJar>true</minimizeJar>
               <!-- Application entry point -->
               <transformers>
-                <transformer
-                  implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>com.quitevis.multiplayermaze.server.Main</mainClass>
                 </transformer>
                 <!-- Include log4j.xml inside the package -->
-                <transformer
-                  implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                   <resource>/log4j.xml</resource>
                   <file>resources/log4j.xml</file>
                 </transformer>

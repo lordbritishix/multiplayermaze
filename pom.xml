@@ -75,6 +75,12 @@
   </dependencyManagement>
 
   <build>
+    <resources>
+  	  <resource>
+  	    <directory>resources</directory>
+  	  </resource>
+    </resources>  
+  
     <plugins>
       <!-- Set compiler version for build phase -->
       <plugin>
