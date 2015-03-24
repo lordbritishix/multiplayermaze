@@ -1,10 +1,9 @@
 package com.quitevis.multiplayermaze.server.infra.network.handlers;
 
+import com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.extern.slf4j.Slf4j;
-
-import com.quitevis.mazeserver.api.generated.MazeServerProtocol.SessionId;
 
 @Slf4j
 public class SessionIdMessageHandler extends SimpleChannelInboundHandler<SessionId> {
@@ -15,7 +14,7 @@ public class SessionIdMessageHandler extends SimpleChannelInboundHandler<Session
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        log.error("An error has occured when handling SessionId message ({})", 
+        log.error("An error has occured when handling SessionId message ({})",
                 ctx.channel().remoteAddress().toString(), cause);
     }
 
